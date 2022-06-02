@@ -10,7 +10,8 @@ def run():
     logging.info('Esse é um log de info')
     logging.warning('Esse é um log de warning')
     logging.error('Esse é um log de error')
-    logging.exception('Esse é um log de exceção')
+    # Equivalente ao ERROR porem com o Traceback ativo
+    # logging.exception('Esse é um log de exceção')
     logging.critical('Esse é um log de critical')
 
     # Exibe Traceback completo
@@ -18,7 +19,8 @@ def run():
         var = variable_invalid
     except Exception as e:
         logging.exception("Gerou um excessão!")
-        logging.error("Gerou um excessão!", exc_info=True)
+        # a expressão anterior tem o mesmo efeito que:
+        # logging.error("Gerou um excessão!", exc_info=True)
 
     # Esconde Traceback
     try:

@@ -10,10 +10,10 @@ from sentry_sdk.integrations.logging import LoggingIntegration
 import app
 
 if __name__ == "__main__":
-    sentry_logging = LoggingIntegration(level=logging.WARNING, event_level=logging.WARNING)
-
+    # Inicia o sentry
     sentry_sdk.init(
         os.getenv('SENTRY_LOGS'),
+        integrations=[LoggingIntegration(level=logging.WARNING, event_level=logging.WARNING)]
     )
 
     # Configura exibição do log de forma basica com somente uma saida
