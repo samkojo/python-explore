@@ -7,5 +7,5 @@ import logging.config
 import app
 
 if __name__ == "__main__":
-    logging.config.fileConfig(fname='logs/logging.conf')
+    logging.config.fileConfig(fname='logging_example/logging.conf')
     app.run()
